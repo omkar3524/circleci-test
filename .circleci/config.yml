@@ -25,9 +25,6 @@ jobs:
           name: Directory Permissions
           command: chmod -R 777 storage bootstrap/cache
       - run:
-          name: Run migrations
-          command: php artisan migrate --database=mysql_testing
-      - run:
           name: Execute tests (Unit and Feature tests) via PHPUnit
           command: vendor/bin/phpunit
   deploy:
